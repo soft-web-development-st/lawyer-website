@@ -208,10 +208,20 @@ a {
 .slider {
     background: linear-gradient(to top, var(--white) 50%, var(--theme-gold-color) 50%);
     padding-bottom: 3rem;
+    width: 100%;
+    overflow: hidden;
+    /* margin:  0 auto; */
+    position: relative;
+}
+.added-container{
+    width: 65%;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .slide-contents-item {
     justify-content: center;
+    /* margin: 0 auto; */
     position: relative;
 }
 
@@ -222,8 +232,10 @@ a {
 }
 
 .slider-contents-text {
-    position: absolute;
+    top: 15%;
     text-align: center;
+    position: absolute;
+    left: 20%;
     text-transform: uppercase;
 }
 
@@ -239,6 +251,54 @@ a {
     font-weight: 300;
     line-height: 1.1;
 }
+
+.btn{
+    font-size: 25px;
+    color:var(--theme-gold-color);
+    border: none;
+    background-color: transparent;
+    position: absolute;
+    top: 40%;
+    border: 1px solid var(--theme-background-grey-color);
+    padding: .5rem;
+    border-radius: 5px;
+    opacity: 0.5;
+    transition: 0.5s ease;
+    cursor: pointer;
+    z-index: 999;
+}
+.next{
+    right: 0.08%;
+}
+.prev{
+    left: 0.08%;
+}
+.btn:hover{
+    opacity: 1;
+}
+.back-to-top{
+    position: fixed;
+    right: 5%;
+    bottom: 10%;
+    font-size: 25px;
+    width: 50px;
+    height: 50px;
+    z-index: 999;
+    border-radius: 50%;
+    background:var(--theme-gold-color);
+    display: grid;
+    place-items: center;
+    transform: translateX(250%);
+    transition: transform 1s ease;
+    color: var(--theme-background-grey-color);
+  }
+  .show {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
 
 /* ============
     Advantages
